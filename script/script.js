@@ -65,6 +65,7 @@ function buyButtonClicked() {
         cartContent.removeChild(cartContent.firstChild);
     }
     updateCartTotal();
+    updateCartCount();
 }
 
 function addCartClicked(event) {

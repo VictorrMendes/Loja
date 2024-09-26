@@ -46,17 +46,19 @@ section {
     padding: 5px ;
     border: 1px solid var(--text-color);
     cursor: pointer;
+    border-radius: 50px;
+    background-color: transparent ;
 }
 .size-btn:hover{
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.4s;
 }
-.size-btn.active{
-    background: var(--main-color);
-    color: var(--bg-color);
+.size-btn.selected {
+    background-color: #cc1515;
+    color: white;
+    border: 2px solid #262c27;
 }
-
 #btn-top{
     margin-top: 2.4rem;
 }
@@ -172,11 +174,7 @@ header {
     gap: 1.5rem;
     width: 100%;
 }
-@media (min-width: 1800px) { 
-    .shop-content {
-    width: 60%;
-    }
-}
+
 .product-box {
     position: relative;
 }
