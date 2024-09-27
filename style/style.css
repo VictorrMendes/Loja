@@ -521,7 +521,7 @@ footer {
 
     .size-buttons {
         display: flex;
-        gap: 2px
+        gap: 1px
     }
 
     .size-btn {
