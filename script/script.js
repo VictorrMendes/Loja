@@ -25,14 +25,14 @@ function ready() {
         var button = removeCartItemButtons[i];
         button.addEventListener('click', removeCartItem);
     }
-    
+
     // Quantity change
     var quantityInputs = document.getElementsByClassName('cart-quantity');
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i];
         input.addEventListener('change', quantityChanged);
     }
-    
+
     // Add to cart
     var addCartButtons = document.getElementsByClassName('add-cart');
     for (var i = 0; i < addCartButtons.length; i++) {
@@ -46,7 +46,7 @@ function ready() {
     // Size Buttons Logic
     var sizeButtons = document.querySelectorAll('.size-btn');
     sizeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Remove 'selected' class from all buttons
             sizeButtons.forEach(btn => btn.classList.remove('selected'));
             // Add 'selected' class to the clicked button
@@ -59,7 +59,7 @@ function ready() {
 function buyButtonClicked() {
     var whatsappMessage = generateWhatsAppMessage();
     window.open(`https://api.whatsapp.com/send?phone=5531998186472&text=${encodeURIComponent(whatsappMessage)}`);
-    
+
     var cartContent = document.getElementsByClassName('cart-content')[0];
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
@@ -79,13 +79,13 @@ function addCartClicked(event) {
     var selectedSizeButton = shopProducts.querySelector('.size-btn.selected');
     if (!selectedSizeButton) {
         alert('Por favor, selecione um tamanho.');
-        return; 
+        return;
     }
     var size = selectedSizeButton.dataset.size;
 
     addProductToCart(title, price, productImg, size);
     updateCartTotal();
-    updateCartCount(); 
+    updateCartCount();
 }
 
 function addProductToCart(title, price, productImg, size) {
@@ -116,7 +116,7 @@ function removeCartItem(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
     updateCartTotal();
-    updateCartCount(); 
+    updateCartCount();
 }
 
 function quantityChanged(event) {
@@ -125,7 +125,7 @@ function quantityChanged(event) {
         input.value = 1;
     }
     updateCartTotal();
-    updateCartCount(); 
+    updateCartCount();
 }
 
 function generateWhatsAppMessage() {
@@ -178,6 +178,75 @@ function updateCartTotal() {
         total += price * quantity;
     }
 
-    total = Math.round(total * 100) / 100; // Arredondar para 2 casas decimais
-    document.getElementsByClassName('total-price')[0].innerText = `R$${total.toFixed(2).replace('.', ',')}`; // Formatar para BR
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('total-price')[0].innerText = `R$${total.toFixed(2).replace('.', ',')}`;
 }
+
+//carrocel
+
+const carouselImages = document.querySelectorAll('.carousel-image');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentIndex = 0;
+
+function showImage(index) {
+    carouselImages.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    showImage(currentIndex);
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+    showImage(currentIndex);
+}
+
+nextButton.addEventListener('click', nextImage);
+prevButton.addEventListener('click', prevImage);
+
+// Inicia o carrossel mostrando a primeira imagem
+showImage(currentIndex);
+
+let currentSlideIndex = 0;
+showSlide(currentSlideIndex);
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName("carousel-item");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n >= slides.length) currentSlideIndex = 0;
+    if (n < 0) currentSlideIndex = slides.length - 1;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[currentSlideIndex].style.display = "block";
+    dots[currentSlideIndex].className += " active";
+}
+
+function nextSlide() {
+    showSlide(currentSlideIndex += 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlideIndex -= 1);
+}
+
+function currentSlide(n) {
+    showSlide(currentSlideIndex = n - 1);
+}
+
+setInterval(function () {
+    nextSlide();
+}, 3000);
+
