@@ -473,7 +473,7 @@ footer {
 @media(max-width: 500px) {
     .shop-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 0.5rem;
         width: 90%;
     }
@@ -500,8 +500,8 @@ footer {
     }
 
     .add-cart {
-        padding: 5px;
-        font-size: 0.7rem;
+        padding: 10px;
+        font-size: 1rem;
     }
 
     .prev {
@@ -521,12 +521,12 @@ footer {
 
     .size-buttons {
         display: flex;
-        gap: 1px
+        gap: 3px
     }
 
     .size-btn {
-        padding: 1.2px 1.2px;
-        font-size: 5px;
+        padding: 3px 3px;
+        font-size: 10px;
         font-weight: bold;
         color: #333;
         background-color: #f1f1f1;
