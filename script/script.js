@@ -268,3 +268,9 @@ filterButtons.forEach(button => {
     });
 });
 
+const hill1 = document.querySelector('#hill1');
+hill2 = document.querySelector('#hill2');
+hill3 = document.querySelector('#hill3');
+tree = document.querySelector('#tree');
+leaf=document.querySelector('#leaf');
+banner=document.querySelector('.banner');
