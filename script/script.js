@@ -250,3 +250,21 @@ setInterval(function () {
     nextSlide();
 }, 3000);
 
+// Selecionar os botões de filtro e adicionar eventos de clique
+let filterButtons = document.querySelectorAll('.filter-btn');
+let productBoxes = document.querySelectorAll('.product-box');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        let category = button.getAttribute('data-category');
+
+        productBoxes.forEach(box => {
+            if (category === 'all' || box.getAttribute('data-category') === category) {
+                box.style.display = 'block'; 
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+});
+

@@ -223,17 +223,59 @@ header {
     margin-top: 2rem;
 }
 
+/*Filtro*/
+.category-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+
+.filter-btn {
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #464e4c;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn:hover {
+    background-color: #e04040;
+    border-color: #bbb;
+}
+
+.filter-btn:active {
+    background-color: #c03030;
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(253, 70, 70, 0.5);
+}
+
+
 /*shop Content*/
 .shop-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
     gap: 1.5rem;
     width: 100%;
 }
 
 .product-box {
     position: relative;
+    max-width: 210px;
+    align-items: center;
 }
+
 
 .product-box:hover {
     padding: 10px;
@@ -470,6 +512,12 @@ footer {
 
 }
 
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
 @media(max-width: 500px) {
     .shop-content {
         display: grid;
@@ -500,7 +548,7 @@ footer {
     }
 
     .add-cart {
-        padding: 10px;
+        padding: 7px;
         font-size: 1rem;
     }
 
@@ -521,7 +569,7 @@ footer {
 
     .size-buttons {
         display: flex;
-        gap: 3px
+        gap: 2.3px
     }
 
     .size-btn {

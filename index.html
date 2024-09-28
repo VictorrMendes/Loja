@@ -41,6 +41,9 @@
             </dv>
 
     </header>
+
+
+
     <!--Banner-->
     <section class="banner">
         <div class="carousel-container">
@@ -98,10 +101,19 @@
     <!--shop-->
     <section class="shop container">
         <h2 class="section-title">Produtos</h2>
-        <!-- Content-->
+
+            <!-- Filtro de categorias -->
+    <div class="category-filters">
+        <button class="filter-btn" data-category="all">Todos</button>
+        <button class="filter-btn" data-category="blusa">Blusa</button>
+        <button class="filter-btn" data-category="perfume">Perfume</button>
+        <button class="filter-btn" data-category="chinelo">Chinelo</button>
+    </div>
+
+        <!-- produtos-->
         <div class="shop-content">
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box" data-category="chinelo">
                 <img src="image/dalmatas (1).jpeg" alt="Chinelo Havaianas 101 Dalmatas" class="product-img">
                 <h2 class="product-title">Chinelo Havaianas 101 Dalmatas</h2>
                 <span class="price">R$25</span>
@@ -116,9 +128,9 @@
                 </i>
             </div>
             <!--Box 2-->
-            <div class="product-box">
+            <div class="product-box" data-category="blusa" >
                 <img src="image/liloStitchBranco (2).jpeg" alt="Chinelo Havaianas Lilo E Stitch" class="product-img">
-                <h2 class="product-title">Chinelo Havaianas Lilo E Stitch</h3>
+                <h2 class="product-title">Blusa</h3>
                     <span class="price">R$27,00</span>
                     <div class="size-buttons">
                         <button class="size-btn" data-size="36">36</button>
@@ -131,7 +143,7 @@
             </div>
 
             <!--Box 3-->
-            <div class="product-box">
+            <div class="product-box" data-category="blusa">
                 <img src="image/santaLolaInveja (2).jpeg" alt="Chinelo Santa Lola " class="product-img">
                 <h2 class="product-title">Chinelo Santa Lola </h3>
                     <span class="price">R$27,00</span>
@@ -145,7 +157,7 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 4-->
-            <div class="product-box">
+            <div class="product-box" data-category="perfume">
                 <img src="image/borboleta.jpeg" alt="Chinelo Havaianas Borboletas" class="product-img">
                 <h2 class="product-title">Chinelo Havaianas Borboletas</h3>
                     <span class="price">R$25,00</span>
@@ -160,7 +172,7 @@
             </div>
 
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box" data-category="perfume">
                 <img src="image/gatinhaRosa (2).jpeg" alt="Chinelo Gatinha" class="product-img">
                 <h2 class="product-title">Chinelo Gatinha Rosa</h3>
                     <span class="price">R$25,00</span>
@@ -174,7 +186,7 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box" data-category="perfume">
                 <img src="image/vacaRoxa (1).jpeg" alt="Chinelo Havaianas Vaquinha " class="product-img">
                 <h2 class="product-title">Chinelo Havaianas Vaquinha</h3>
                     <span class="price">R$25,00</span>
@@ -188,7 +200,7 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box"data-category="chinelo">
                 <img src="image/stithMarrom (1).jpeg" alt="Chinelo  Havaianas Stitch " class="product-img">
                 <h2 class="product-title">Chinelo Havaianas Stitch</h3>
                     <span class="price">R$25,00</span>
@@ -202,7 +214,7 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box"data-category="chinelo">
                 <img src="image/santaLolaPretoRosa (2).jpeg" alt="Chinelo Santa Lola" class="product-img">
                 <h2 class="product-title">Chinelo Santa Lola</h3>
                     <span class="price">R$25,00</span>
@@ -216,9 +228,9 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box"data-category="blusa">
                 <img src="image/mineyRosa (1).jpeg" alt="Chinelo Havaianas Miney  " class="product-img">
-                <h2 class="product-title">Chinelo Havaianas Miney</h3>
+                <h2 class="product-title">blusa Havaianas Miney</h3>
                     <span class="price">R$25,00</span>
                     <div class="size-buttons" id="btn-top">
                         <button class="size-btn" data-size="36">36</button>
@@ -230,9 +242,9 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box" data-category="blusa">
                 <img src="image/stwtInfantil (1).jpeg" alt="Chinelo Havaianas Stitch Infantil" class="product-img">
-                <h2 class="product-title">Chinelo Havaianas Stitch Infantil</h3>
+                <h2 class="product-title">blusa Havaianas Stitch Infantil</h3>
                     <span class="price">R$25,00</span>
                     <div class="size-buttons">
                         <button class="size-btn" data-size="36">36</button>
@@ -244,10 +256,10 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box"data-category="blusa">
                 <img src="image/homemAranhaPretoBranco (1).jpeg" alt="Chinelo Havaianas Homen Aranha"
                     class="product-img">
-                <h2 class="product-title">Chinelo Havaianas Homen Aranha</h3>
+                <h2 class="product-title">blusa Havaianas Homen Aranha</h3>
                     <span class="price">R$25,00</span>
                     <div class="size-buttons">
                         <button class="size-btn" data-size="36">36</button>
@@ -259,9 +271,9 @@
                     <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--Box 1-->
-            <div class="product-box">
+            <div class="product-box" data-category="blusa">
                 <img src="image/hulk (1).jpeg" alt="Chinelo Havaianas hulk" class="product-img">
-                <h2 class="product-title">Chinelo Havaianas hulk</h3>
+                <h2 class="product-title">blusa Havaianas hulk</h3>
                     <span class="price">R$25,00</span>
                     <div class="size-buttons" id="btn-top">
                         <button class="size-btn" data-size="36">36</button>
