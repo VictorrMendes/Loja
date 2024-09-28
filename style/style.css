@@ -33,6 +33,7 @@ body {
     max-width: 1068px;
     margin: auto;
     width: 100%;
+    z-index: 6;
 }
 
 .parallax {
@@ -43,6 +44,7 @@ body {
     height: 100vh;
     overflow: hidden;
     background: #fff;
+    top: 0;
 }
 .parallax img{
     position: absolute;
@@ -51,10 +53,17 @@ body {
     height: 100%;
     pointer-events: none;
 }
-.parallax{}
 
 
-
+.banner{
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    z-index: 4;
+}
+#plant{
+    z-index: 6;
+}
 
 
 section {
@@ -243,11 +252,15 @@ header {
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
+    background: #003329;
 }
 
 .shop {
     margin-top: 2rem;
+    z-index: 6;
+    background: #003329;
 }
+
 
 /*Filtro*/
 .category-filters {
@@ -255,6 +268,8 @@ header {
     justify-content: center;
     margin-bottom: 20px;
     gap: 10px;
+    z-index: 6;
+
 }
 
 
@@ -406,12 +421,13 @@ header {
 /* Estilo do carrossel */
 .carousel-container {
     position: relative;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 4;
 }
 
 .carousel-item {
@@ -439,8 +455,8 @@ header {
 
 .counter {
     margin-top: 10px;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    color: #1d1111;
 }
 
 .prev,
@@ -459,11 +475,11 @@ header {
 }
 
 .prev {
-    left: 40px;
+    left: 5px;
 }
 
 .next {
-    right: 40px;
+    right: 0px;
 }
 
 .prev:hover,
@@ -484,6 +500,7 @@ header {
 .dots {
     text-align: center;
     margin-top: 10px;
+    z-index: 4;
 }
 
 .dot {
@@ -632,11 +649,12 @@ footer {
 
     footer {
         font-size: 0.5rem;
-
     }
     .parallax img{
-
         width: 200%;
-        
+    }
+    .banner{
+        top: 40%;
+        left: 28%;
     }
 }

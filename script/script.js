@@ -274,3 +274,16 @@ hill3 = document.querySelector('#hill3');
 tree = document.querySelector('#tree');
 leaf=document.querySelector('#leaf');
 banner=document.querySelector('.banner');
+
+window.addEventListener('scroll', function () {
+    let value = window.scrollY;
+
+    banner.style.marginTop = value * 0.3 + 'px'; 
+
+    hill1.style.bottom = -value * 2 + 'px';
+    hill2.style.left = -value * 1.5 + 'px';
+    hill3.style.right = -value * 1.5 + 'px';
+
+    leaf.style.top = value * -1.5 + 'px';
+    leaf.style.left = value * 1.5 + 'px';
+});
