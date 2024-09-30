@@ -182,75 +182,7 @@ function updateCartTotal() {
     document.getElementsByClassName('total-price')[0].innerText = `R$${total.toFixed(2).replace('.', ',')}`;
 }
 
-//carrocel
-
-const carouselImages = document.querySelectorAll('.carousel-image');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-
-let currentIndex = 0;
-
-function showImage(index) {
-    carouselImages.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-    });
-}
-
-function nextImage() {
-    currentIndex = (currentIndex + 1) % carouselImages.length;
-    showImage(currentIndex);
-}
-
-function prevImage() {
-    currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-    showImage(currentIndex);
-}
-
-nextButton.addEventListener('click', nextImage);
-prevButton.addEventListener('click', prevImage);
-
-// Inicia o carrossel mostrando a primeira imagem
-showImage(currentIndex);
-
-let currentSlideIndex = 0;
-showSlide(currentSlideIndex);
-
-function showSlide(n) {
-    const slides = document.getElementsByClassName("carousel-item");
-    const dots = document.getElementsByClassName("dot");
-
-    if (n >= slides.length) currentSlideIndex = 0;
-    if (n < 0) currentSlideIndex = slides.length - 1;
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[currentSlideIndex].style.display = "block";
-    dots[currentSlideIndex].className += " active";
-}
-
-function nextSlide() {
-    showSlide(currentSlideIndex += 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlideIndex -= 1);
-}
-
-function currentSlide(n) {
-    showSlide(currentSlideIndex = n - 1);
-}
-
-setInterval(function () {
-    nextSlide();
-}, 3000);
-
-// Selecionar os botões de filtro e adicionar eventos de clique
+// Filtro
 let filterButtons = document.querySelectorAll('.filter-btn');
 let productBoxes = document.querySelectorAll('.product-box');
 
@@ -260,7 +192,7 @@ filterButtons.forEach(button => {
 
         productBoxes.forEach(box => {
             if (category === 'all' || box.getAttribute('data-category') === category) {
-                box.style.display = 'block'; 
+                box.style.display = 'block';
             } else {
                 box.style.display = 'none';
             }
@@ -268,22 +200,62 @@ filterButtons.forEach(button => {
     });
 });
 
+
+//carrocel
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const dots = document.querySelectorAll('.dot');
+
+let currentIndex = 0;
+
+function showSlide(n) {
+    carouselItems.forEach((item, i) => {
+        item.classList.toggle('active', i === n);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === n);
+    });
+
+    currentIndex = n;
+}
+
+function nextSlide() {
+    showSlide((currentIndex + 1) % carouselItems.length);
+}
+
+function prevSlide() {
+    showSlide((currentIndex - 1 + carouselItems.length) % carouselItems.length);
+}
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+showSlide(currentIndex);
+setInterval(nextSlide, 3000);
+
+//fim do carrocel
+
+
+// Parallax
 const hill1 = document.querySelector('#hill1');
 hill2 = document.querySelector('#hill2');
 hill3 = document.querySelector('#hill3');
 tree = document.querySelector('#tree');
-leaf=document.querySelector('#leaf');
-banner=document.querySelector('.banner');
+leaf = document.querySelector('#leaf');
+banner = document.querySelector('.banner');
 
 window.addEventListener('scroll', function () {
     let value = window.scrollY;
 
-    banner.style.marginTop = value * 0.3 + 'px'; 
+    banner.style.marginTop = value * 0.2 + 'px';
 
-    hill1.style.bottom = -value * 2 + 'px';
-    hill2.style.left = -value * 1.5 + 'px';
-    hill3.style.right = -value * 1.5 + 'px';
+    hill1.style.bottom = -value * 1 + 'px';
+    hill2.style.left = -value * 0.75 + 'px';
+    hill3.style.right = -value * 0.75 + 'px';
 
-    leaf.style.top = value * -1.5 + 'px';
-    leaf.style.left = value * 1.5 + 'px';
+    leaf.style.top = value * -0.75 + 'px';
+    leaf.style.left = value * 0.75 + 'px';
 });
