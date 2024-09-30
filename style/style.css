@@ -529,10 +529,12 @@ footer {
     padding: 1rem 0;
     text-align: center;
     font-size: 0.8rem;
-    color: var(--text-color);
+    color: #ffffff83;
     position: relative;
     bottom: 0;
     width: 100%;
+    background-color: #0b3b3b8e;
+
 }
 
 
