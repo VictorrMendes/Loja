@@ -55,19 +55,15 @@ body {
     pointer-events: none;
 }
 
-
-
 .banner {
     position: absolute;
     top: 30%;
     left: 43%;
     z-index: 4;
 }
-
 #plant {
     z-index: 6;
 }
-
 
 section {
     padding: .3rem 0 1rem;
@@ -105,7 +101,7 @@ section {
 }
 
 .size-btn.selected {
-    background-color: #4CAF50;
+    background-color: #369482;
     color: white;
     border-color: #4CAF50;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -281,7 +277,7 @@ header {
     font-size: 12px;
     font-weight: bold;
     color: #fff;
-    background-color: #464e4c;
+    background-color: #004130;
     border: 2px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
@@ -290,19 +286,23 @@ header {
 }
 
 .filter-btn:hover {
-    background-color: #e04040;
-    border-color: #bbb;
+    background-color: #369482;
+    border-color: #6e937a;
 }
 
 .filter-btn:active {
-    background-color: #c03030;
+    background-color: #369482;
     transform: scale(0.95);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .filter-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(253, 70, 70, 0.5);
+    box-shadow: 0 0 0 3px rgba(121, 226, 125, 0.5);
+    background-color: #369482;
+    -webkit-box-shadow: 0px 0px 51px 0px rgba(45, 255, 196, 0.89);
+    -moz-box-shadow: 0px 0px 51px 0px rgba(45, 255, 196, 0.89);
+    box-shadow: 0px 0px 51px 0px rgba(45, 255, 196, 0.89);
 }
 
 
