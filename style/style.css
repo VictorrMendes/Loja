@@ -57,10 +57,12 @@ body {
 
 .banner {
     position: absolute;
-    top: 30%;
-    left: 43%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 4;
 }
+
 #plant {
     z-index: 6;
 }
@@ -445,7 +447,7 @@ header {
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-width: 400px;
+    max-width: 600px;
     max-height: 400px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -478,11 +480,16 @@ header {
 }
 
 .prev {
-    left: 5px;
+    left: 2px;
+    top: 40%;
+    z-index: 5;
 }
 
 .next {
-    right: 0px;
+    right: 2px;
+    top: 40%;
+    z-index: 5;
+
 }
 
 .prev:hover,
@@ -602,7 +609,7 @@ footer {
     }
 
     .prev {
-        left: 8px;
+        left: 5px;
     }
 
     .next {
@@ -673,7 +680,12 @@ footer {
     }
 
     .banner {
-        top: 32%;
-        left: 28%;
+        top: 70%;
+    }
+
+    .carousel-item img {
+        width: auto;
+        height: 200px;
+
     }
 }
