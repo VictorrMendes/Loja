@@ -47,9 +47,7 @@ function ready() {
     var sizeButtons = document.querySelectorAll('.size-btn');
     sizeButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // Remove 'selected' class from all buttons
             sizeButtons.forEach(btn => btn.classList.remove('selected'));
-            // Add 'selected' class to the clicked button
             button.classList.add('selected');
         });
     });
@@ -234,7 +232,7 @@ prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
 showSlide(currentIndex);
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 4000);
 
 //fim do carrocel
 
