@@ -319,7 +319,6 @@ header {
 
 .product-box:hover .product-inner {
     transform: rotateY(180deg);
-    /* Faz a rotação */
 }
 
 .product-front,
@@ -327,17 +326,21 @@ header {
     position: absolute;
     width: 100%;
     backface-visibility: hidden;
-    /* Esconde o verso quando não está visível */
 }
 
 .product-front {
     z-index: 2;
-    /* Coloca a frente acima */
 }
 
 .product-back {
+    background-color: #4CAF50;
     transform: rotateY(180deg);
-    /* Gira o verso */
+    height: 100%;
+}
+
+.product-back .add-cart {
+    z-index: 3;
+    position: relative;
 }
 
 .product-box {

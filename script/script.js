@@ -1,3 +1,13 @@
+const car = document.querySelector('.add-cart');
+
+car.addEventListener('click', () => {
+    console.log('Carro adicionado ao carrinho');
+});
+
+
+
+
+
 // Cart
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector('.cart');
@@ -68,7 +78,7 @@ function buyButtonClicked() {
 
 function addCartClicked(event) {
     var button = event.target;
-    var shopProducts = button.parentElement;
+    var shopProducts = button.closest('.product-box');
     var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
     var price = shopProducts.getElementsByClassName('price')[0].innerText;
     var productImg = shopProducts.getElementsByClassName('product-img')[0].src;
