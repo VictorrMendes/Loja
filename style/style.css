@@ -11,24 +11,29 @@
     list-style: none;
     text-decoration: none;
 }
+
 :root {
     --main-color: #fd4646;
     --text-color: #171427;
     --bg-color: #fff;
 }
+
 img {
     width: 100%;
 }
+
 body {
     color: var(--bg-color);
     background: #003329;
 }
+
 .container {
     max-width: 1068px;
     margin: auto;
     width: 100%;
     z-index: 6;
 }
+
 .parallax {
     position: relative;
     display: flex;
@@ -39,6 +44,7 @@ body {
     background: #fff;
     top: 0;
 }
+
 .parallax img {
     position: absolute;
     bottom: 0;
@@ -46,6 +52,7 @@ body {
     height: 100%;
     pointer-events: none;
 }
+
 .banner {
     position: absolute;
     left: 50%;
@@ -53,13 +60,16 @@ body {
     transform: translate(-50%, -50%);
     z-index: 4;
 }
+
 #plant {
     z-index: 6;
 }
+
 section {
     padding: .3rem 0 1rem;
     margin-top: 80px;
 }
+
 .cart-img,
 .product-img {
     position: relative;
@@ -72,6 +82,7 @@ section {
     display: flex;
     gap: 8px;
 }
+
 .size-btn {
     padding: 5px 5px;
     font-size: 10px;
@@ -84,10 +95,12 @@ section {
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
+
 .size-btn:hover {
     background-color: #e0e0e0;
     border-color: #888;
 }
+
 .size-btn.selected {
     background-color: #369482;
     color: white;
@@ -95,10 +108,12 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
+
 .size-btn:active {
     transform: scale(0.95);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 #btn-top {
     margin-top: 20px;
 }
@@ -113,6 +128,7 @@ header {
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
     z-index: 10;
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -121,6 +137,7 @@ header {
     background-color: var(--bg-color);
     z-index: 10;
 }
+
 .logo {
     font-family: "Playfair Display", cursive;
     font-size: 1.4rem;
@@ -136,6 +153,7 @@ header {
     animation: animaMarcador 0.8s linear infinite, animatext steps(13) 4s;
     text-decoration: none;
 }
+
 @keyframes animaMarcador {
     50% {
         border-right: transparent;
@@ -147,18 +165,21 @@ header {
         width: 0;
     }
 }
+
 #cart-icon {
     font-size: 1.8rem;
     cursor: pointer;
     position: relative;
     color: var(--text-color);
 }
+
 .cart-content {
     max-height: 300px;
     overflow-y: auto;
     margin-bottom: 20px;
     color: var(--text-color);
 }
+
 #cart-count {
     background-color: red;
     color: white;
@@ -188,35 +209,42 @@ header {
     transition: 0.4s;
     overflow-y: auto;
 }
+
 .cart.active {
     right: 0;
 }
+
 .cart-title {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
 }
+
 .cart-box {
     display: grid;
     grid-template-columns: 32% 50% 18%;
     gap: 1rem;
     margin-top: 1rem;
 }
+
 .cart-img {
     width: 80px;
     height: 80px;
     object-fit: contain;
     padding: 5px;
 }
+
 .detail-box {
     display: grid;
     row-gap: 0.5rem;
 }
+
 .cart-product-title {
     font-size: 1rem;
     text-transform: uppercase;
 }
+
 .section-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -224,6 +252,7 @@ header {
     margin-bottom: 1.5rem;
     background: #003329;
 }
+
 .shop {
     margin-top: 2rem;
     z-index: 6;
@@ -238,6 +267,7 @@ header {
     gap: 10px;
     z-index: 6;
 }
+
 .filter-btn {
     padding: 8px 13px;
     font-size: 12px;
@@ -250,15 +280,18 @@ header {
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
+
 .filter-btn:hover {
     background-color: #369482;
     border-color: #6e937a;
 }
+
 .filter-btn:active {
     background-color: #369482;
     transform: scale(0.95);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 .filter-btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(121, 226, 125, 0.5);
@@ -274,34 +307,73 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(210px, auto));
     gap: 1.5rem;
     width: 100%;
-
 }
+
+.product-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.product-box:hover .product-inner {
+    transform: rotateY(180deg);
+    /* Faz a rotação */
+}
+
+.product-front,
+.product-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    /* Esconde o verso quando não está visível */
+}
+
+.product-front {
+    z-index: 2;
+    /* Coloca a frente acima */
+}
+
+.product-back {
+    transform: rotateY(180deg);
+    /* Gira o verso */
+}
+
 .product-box {
     position: relative;
-    max-width: 210px;
+    max-width: 205px;
+    width: 100%;
+    min-height: 453px;
     align-items: center;
+    perspective: 1000px;
 }
+
 .product-box:hover {
     padding: 10px;
     border: 1px solid var(--text-color);
     transition: 0.4s;
 }
+
 .product-img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
 }
+
 .cart-quantity {
     border: 1px solid var(--text-color);
     outline-color: var(--main-color);
     width: 2.4rem;
     text-align: center;
 }
+
 .cart-remove {
     font-size: 24px;
     color: var(--main-color);
     cursor: pointer;
 }
+
 .cart-total {
     display: flex;
     justify-content: space-between;
@@ -312,13 +384,16 @@ header {
     bottom: 0;
     background-color: var(--bg-color);
 }
+
 .total-title {
     font-size: 1rem;
     font-weight: 600;
 }
+
 .total-price {
     margin-left: 0.5rem;
 }
+
 .btn-buy {
     display: block;
     margin: 1rem auto;
@@ -491,7 +566,15 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #0b3b3b8e;
+}
 
+.quantidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 10px;
 }
 
 
@@ -531,6 +614,11 @@ footer {
 
     .product-box {
         position: relative;
+        max-width: 155px;
+        width: 100%;
+        min-height: 353px;
+        align-items: center;
+        perspective: 1000px;
         left: 15%;
         margin-top: 10px;
         gap: 1rem;
@@ -635,6 +723,7 @@ footer {
         height: 200px;
 
     }
+
     .category-filters {
         display: flex;
         justify-content: center;
@@ -642,6 +731,7 @@ footer {
         gap: 10px;
         z-index: 6;
     }
+
     .filter-btn {
         padding: 5px 10px;
         font-size: 9px;
