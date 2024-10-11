@@ -334,7 +334,7 @@ header {
 }
 
 .product-back {
-    background-color: #3d773f;
+    background-color: #bbd1a969;
     transform: rotateY(180deg);
     height: 100%;
     width: 100%;
@@ -349,7 +349,7 @@ header {
     margin: 10% 10px;
     padding: 5;
     color: #fff;
-    font-size: 74%;
+    font-size: 76%;
     text-align:start;
     margin-top: 1rem;
 }
@@ -376,7 +376,7 @@ header {
     position: relative;
     max-width: 205px;
     width: 100%;
-    min-height: 453px;
+    min-height: 480px;
     align-items: center;
     perspective: 1000px;
 }
@@ -657,7 +657,7 @@ footer {
         position: relative;
         max-width: 155px;
         width: 100%;
-        min-height: 353px;
+        min-height: 367px;
         align-items: center;
         perspective: 1000px;
         left: 15%;
@@ -783,17 +783,22 @@ footer {
     }
     .size-title{
         margin-top: 10px;
-        font-size: 57%;
+        font-size: 66%;
     }
     .product-back p {
         margin: 10px;
         padding: 5;
-        font-size: 65%;
+        font-size: 60%;
         margin-top: 1rem;
     }
     .product-back h2 {
         margin: 5px;
         padding: 3;
-        font-size: 90%;
+        font-size: 60%;
+    }
+    .product-back h4 {
+        margin-top: 5%;
+        padding: 3;
+        font-size: 60%;
     }
 }
