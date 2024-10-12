@@ -66,7 +66,7 @@ function ready() {
 // Buy button
 function buyButtonClicked() {
     var whatsappMessage = generateWhatsAppMessage();
-    window.open(`https://api.whatsapp.com/send?phone=5531998186472&text=${encodeURIComponent(whatsappMessage)}`);
+    window.open(`https://api.whatsapp.com/send?phone=5531991737075&text=${encodeURIComponent(whatsappMessage)}`);
 
     var cartContent = document.getElementsByClassName('cart-content')[0];
     while (cartContent.hasChildNodes()) {
