@@ -85,6 +85,7 @@ section {
     bottom: 5%;    
     flex-wrap: wrap; 
     margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
 }
 #size-tres{
     bottom: 12%;    
