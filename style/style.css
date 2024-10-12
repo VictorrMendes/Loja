@@ -347,7 +347,7 @@ header {
     margin: 10% 10px;
     padding: 5;
     color: #fff;
-    font-size: 76%;
+    font-size: 80%;
     text-align:start;
     margin-top: 1rem;
 }
@@ -470,6 +470,7 @@ header {
     color: var(--bg-color);
     padding: 10px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 #empty{
     color: #d70101;
@@ -709,7 +710,7 @@ footer {
 
     .add-cart {
         padding: 7px;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .prev {
