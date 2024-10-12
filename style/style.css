@@ -80,9 +80,14 @@ section {
 
 .size-buttons {
     display: flex;
-    gap: 8px;
+    gap: 5px;
     position: absolute;
-    bottom: 12%;
+    bottom: 5%;    
+    flex-wrap: wrap; 
+    margin-left: 5%;
+}
+#size-tres{
+    bottom: 12%;    
 }
 
 .size-btn {
@@ -729,13 +734,13 @@ footer {
     }
 
     .size-buttons {
-        display: flex;
         gap: 2.3px;
+        bottom: 5%;
     }
 
     .size-btn {
         padding: 3px 3px;
-        font-size: 10px;
+        font-size: 8px;
         font-weight: bold;
         color: #333;
         background-color: #f1f1f1;
