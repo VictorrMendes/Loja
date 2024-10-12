@@ -69,11 +69,16 @@ function buyButtonClicked() {
     window.open(`https://api.whatsapp.com/send?phone=5531991737075&text=${encodeURIComponent(whatsappMessage)}`);
 
     var cartContent = document.getElementsByClassName('cart-content')[0];
+
+    // Limpar o carrinho
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
+    
+    // Atualizar total e quantidade após limpar o carrinho
+    updateCartCount(); 
     updateCartTotal();
-    updateCartCount();
+
 }
 
 function addCartClicked(event) {
@@ -118,6 +123,7 @@ function addProductToCart(title, price, productImg, size) {
     cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener('change', quantityChanged);
 
     updateCartTotal();
+    updateCartCount();
 }
 
 function removeCartItem(event) {
