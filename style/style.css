@@ -160,7 +160,6 @@ header {
         border-right: transparent;
     }
 }
-
 @keyframes animatext {
     0% {
         width: 0;
@@ -173,7 +172,6 @@ header {
     position: relative;
     color: var(--text-color);
 }
-
 .cart-content {
     max-height: 300px;
     overflow-y: auto;
@@ -473,10 +471,40 @@ header {
     padding: 10px;
     cursor: pointer;
 }
+#empty{
+    color: #d70101;
+    text-decoration:underline;
+}
 
 .add-cart:hover {
     background: green;
     transition: 0.4s;
+}
+#litter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#litter img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#relogio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#relogio img {
+    position: absolute;
+    top: 0;
+    object-fit:fill;
+    width: 100%;
+    height: 50%;
 }
 
 /* Estilo do carrossel */
@@ -788,7 +816,7 @@ footer {
     .product-back p {
         margin: 10px;
         padding: 5;
-        font-size: 60%;
+        font-size: 65%;
         margin-top: 1rem;
     }
     .product-back h2 {

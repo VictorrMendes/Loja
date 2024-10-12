@@ -7,7 +7,6 @@
     <title>Gisele Souza</title>
     <link rel="stylesheet" href="style/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 
 <!--body-->
@@ -26,12 +25,11 @@
                 <h2 class="cart-title">Seu Carrinho</h2>
                 <!--content-->
                 <div class="cart-content">
-
-                </div>
-                <!--Total-->
-                <div class="cart-total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">R$0</div>
+                    <!--Total-->
+                    <div class="cart-total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">R$ 0</div>
+                    </div>
                 </div>
                 <!--Buy Button-->
                 <button type="button" class="btn-buy">Comprar agora</button>
@@ -39,9 +37,8 @@
                 <i class='bx bx-x' id="close-cart"></i>
             </div>
             </dv>
-
     </header>
-
+    <!-- Paralax -->
     <section class="parallax">
         <img src="./paralax/hill1.png" id="hill1">
         <img src="./paralax/hill2.png" />
@@ -80,7 +77,6 @@
                 <img src="/image/Banner/6.png" alt="Imagem 6">
                 <div class="counter">6 de 6</div>
             </div>
-
         </div>
 
         <button class="prev">❮</button>
@@ -113,7 +109,6 @@
         <div class="shop-content">
 
             <!-- Box 1 -->
-            <!-- Box 1 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
@@ -122,27 +117,21 @@
                         <h2 class="product-title">Chinelo Havaianas Dálmatas - Edição 101 Dálmatas</h2>
                         <span class="price">R$15,99</span>
                     </div>
-
                     <!-- Parte de Trás (Descrição) -->
                     <div class="product-back">
                         <h2 class="product-title"> Havaianas 101 Dálmatas - Conforto e Estilo</h2>
                         <h4>Descrição:</h4>
                         <p>Leve o charme dos 101 Dálmatas para o seu dia a dia! Com este chinelo confortável, inspirado
                             no clássico filme da Disney, você estará sempre no estilo.</p>
-                        <span class="quantidade">Quantidade disponível - 0</span>
+                        <span class="quantidade">Quantidade disponível - <span id="empty">0</span></span>
                         <span class="size-title">Selecione o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn">Encomendar</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
             <!-- Box 2 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -160,14 +149,10 @@
                         <h4>Descrição:</h4>
                         <p>Entre no clima de aventura com o chinelo Lilo & Stitch. Ideal para quem ama conforto e adora
                             o estilo único dos personagens da Disney.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>1</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="35-36">35-36</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
@@ -190,20 +175,15 @@
                         <h4>Descrição:</h4>
                         <p>O icônico símbolo do Olho Grego aliado ao conforto da Santa Lola. Um chinelo estiloso que
                             traz proteção e elegância para o seu look.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span id="empty">0</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn">Encomendar</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
             <!-- Box 4 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -220,20 +200,15 @@
                         <h4>Descrição:</h4>
                         <p>Delicado e encantador, o chinelo com estampa delicada de borboletas e flores tropicais, ideal
                             para trazer um toque de natureza aos seus pés.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span id="empty">0</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn">Encomendar</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
             <!-- Box 5 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -250,21 +225,18 @@
                         <h4>Descrição:</h4>
                         <p>Com um design encantador, o chinelo com estampa fofa de gatinha e tiras brilhantes, perfeito
                             para quem adora um toque de brilho e diversão.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>4</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="25-26">25-26</button>
+                            <button class="size-btn" data-size="29-30">29-30</button>
+                            <button class="size-btn" data-size="31-32">31-32</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
             <!-- Box 6 -->
-
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
@@ -280,21 +252,16 @@
                         <h4>Descrição:</h4>
                         <p>Com uma estampa divertida de vaquinha roxa, este chinelo é perfeito para quem gosta de
                             conforto com um toque de originalidade.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
-                        <span class="size-title">Escolha o tamanho: </span>
-                        <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <span class="quantidade">Quantidade disponível: <span id="empty">0</span></span>
+                            <span class="size-title">Escolha o tamanho: </span>
+                            <div class="size-buttons">
+                                <button class="size-btn">Encomendar</button>
+                            </div>
+                            <i class='bx bx-shopping-bag add-cart'></i>
                         </div>
-                        <i class='bx bx-shopping-bag add-cart'></i>
-                    </div>
                 </div>
             </div>
             <!-- Box 7 -->
-
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
@@ -310,14 +277,11 @@
                         <h4>Descrição:</h4>
                         <p>Com um design inspirado no personagem Stitch, este chinelo traz conforto e estilo para os fãs
                             dessa adorável criatura.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>0</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="39-40">39-40</button>
+
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
@@ -339,20 +303,16 @@
                         <h4>Descrição:</h4>
                         <p>Combinando sofisticação e conforto, este chinelo da Santa Lola é perfeito para quem não abre
                             mão de estilo em qualquer ocasião.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>3</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="33-34">33-34</button>
+                            <button class="size-btn" data-size="35-36">35-36</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
             <!-- Box 9 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -369,21 +329,15 @@
                         <h4>Descrição:</h4>
                         <p>Com estampa da Minnie, este chinelo infantil traz diversão e conforto para os pés das
                             pequenas fashionistas.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>1</span></span>
                         <span class="size-title">Selecione o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="21">21</button>
-                            <button class="size-btn" data-size="23">23</button>
-                            <button class="size-btn" data-size="27">27</button>
-                            <button class="size-btn" data-size="32">32</button>
-                            <button class="size-btn" data-size="34">34</button>
+                            <button class="size-btn" data-size="27-28">27-28</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
-
             <!-- Box 10 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -401,21 +355,15 @@
                         <h4>Descrição:</h4>
                         <p>Inspirado no adorável personagem Stitch, este chinelo é ideal para os pequenos que amam
                             diversão e estilo.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>1</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="29-30">29-30</button>
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
-
             <!-- Box 11 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -432,21 +380,16 @@
                         <h2 class="product-title">Havaianas Homem-Aranha - Aventura Clássica</h2>
                         <h4>Descrição:</h4>
                         <p>Com o icônico herói, este chinelo traz ação e conforto para os fãs do Homem-Aranha.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
+                        <span class="quantidade">Quantidade disponível: <span>1</span></span>
                         <span class="size-title">Escolha o tamanho: </span>
                         <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="27-28">27-28</button>
+
                         </div>
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 </div>
             </div>
-
-
             <!-- Box 12 -->
             <div class="product-box" data-category="chinelo">
                 <div class="product-inner">
@@ -463,21 +406,15 @@
                         <h4>Descrição:</h4>
                         <p>Este chinelo com estampa do Hulk é perfeito para os pequenos heróis que adoram aventuras e
                             diversão.</p>
-                        <span class="quantidade">Quantidade disponível: 0</span>
-                        <span class="size-title">Escolha o tamanho: </span>
-                        <div class="size-buttons">
-                            <button class="size-btn" data-size="36">36</button>
-                            <button class="size-btn" data-size="37">37</button>
-                            <button class="size-btn" data-size="38">38</button>
-                            <button class="size-btn" data-size="39">39</button>
-                            <button class="size-btn" data-size="40">40</button>
+                            <span class="quantidade">Quantidade disponível: <span id="empty">0</span></span>
+                            <span class="size-title">Escolha o tamanho: </span>
+                            <div class="size-buttons">
+                                <button class="size-btn">Encomendar</button>
+                            </div>
+                            <i class='bx bx-shopping-bag add-cart'></i>
                         </div>
-                        <i class='bx bx-shopping-bag add-cart'></i>
-                    </div>
                 </div>
             </div>
-
-
 
             <!--Roupa-->
             <!--Box 1-->
@@ -486,7 +423,7 @@
             <div class="product-box" data-category="roupa">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/blusa/blusa verde.jpg" alt="Blusa Feminina Verde" class="product-img">
                         <h2 class="product-title">Blusa Feminina Verde</h2>
                         <span class="price">R$55,00</span>
@@ -514,7 +451,7 @@
             <div class="product-box" data-category="roupa">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/blusa/blusa-listraada.jpg" alt="Blusa Feminina Listrada" class="product-img">
                         <h2 class="product-title">Blusa Feminina Listrada</h2>
                         <span class="price">R$72,00</span>
@@ -542,7 +479,7 @@
             <div class="product-box" data-category="roupa">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/blusa/blusa-vintage.jpg" alt="Blusa Feminina Vintage" class="product-img">
                         <h2 class="product-title">Blusa Feminina Vintage </h2>
                         <span class="price">R$55,00</span>
@@ -572,7 +509,7 @@
             <div class="product-box" data-category="perfume">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/perfume/212 Men Nyc.jpg" alt="Perfume 212 Men Nyc" class="product-img">
                         <h2 class="product-title">Perfume 212 Men Nyc </h2>
                         <span class="price">R$50,00</span>
@@ -596,7 +533,7 @@
             <div class="product-box" data-category="perfume">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/perfume/dolce & Gabbana.jpg" alt="Perfume Dolce & Gabbana" class="product-img">
                         <h2 class="product-title">Perfume Dolce & Gabbana </h2>
                         <span class="price">R$50,00</span>
@@ -620,7 +557,7 @@
             <div class="product-box" data-category="perfume">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/perfume/One-MIlion.jpg" alt="Perfume One Million" class="product-img">
                         <h2 class="product-title">Perfume Importado One Million </h2>
                         <span class="price">R$55,00</span>
@@ -644,7 +581,7 @@
             <div class="product-box" data-category="perfume">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="litter">
                         <img src="image/perfume/download.jpg" alt="Perfume One Million" class="product-img">
                         <h2 class="product-title">Perfume One Million </h2>
                         <span class="price">R$55,00</span>
@@ -670,7 +607,7 @@
             <div class="product-box" data-category="relogio">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="relogio">
                         <img src="image/relogio/relogioInvictaPrata.jpeg" alt="Relogio Invicta Prata"
                             class="product-img">
                         <h2 class="product-title">Relógio Invicta Prata Cronógrafo </h2>
@@ -691,12 +628,11 @@
                     </div>
                 </div>
             </div>
-
             <!--Box 2-->
             <div class="product-box" data-category="relogio">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="relogio">
                         <img src="image/relogio/relogioLacostePrata.jpeg" alt="Relogio Lacoste Prata"
                             class="product-img">
                         <h2 class="product-title">Relógio Lacoste Prata </h2>
@@ -717,12 +653,11 @@
                     </div>
                 </div>
             </div>
-
             <!--Box 3-->
             <div class="product-box" data-category="relogio">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="relogio">
                         <img src="image/relogio/relogioLacosteDourado.jpeg" alt="Relogio Lacoste Dourado"
                             class="product-img">
                         <h2 class="product-title">Relógio Lacoste Dourado </h2>
@@ -747,7 +682,7 @@
             <div class="product-box" data-category="relogio">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="relogio">
                         <img src="image/relogio/relogioLacosteDouradoVermelho.jpeg"
                             alt="Relogio Lacoste Dourado e vermelho" class="product-img">
                         <h2 class="product-title">Relógio Lacoste Dourado/Vermelho </h2>
@@ -772,7 +707,7 @@
             <div class="product-box" data-category="relogio">
                 <div class="product-inner">
                     <!-- Parte da Frente (Imagem) -->
-                    <div class="product-front">
+                    <div class="product-front" id="relogio">
                         <img src="image/relogio/relogioDIgitalRosa.jpeg" alt="Relogio Digital Rosa" class="product-img">
                         <h2 class="product-title">Relógio Digital Rosa </h2>
                         <span class="price">R$55,00</span>
@@ -792,10 +727,8 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
+
     </section>
 
     <!--Footer-->
